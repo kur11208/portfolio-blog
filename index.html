@@ -6,7 +6,7 @@
     <title>成果物ブログ | Portfolio Lab Notes</title>
     <meta
       name="description"
-      content="就活用に制作物、研究、検証ログをまとめたポートフォリオブログ。AI、RAG、データ分析、3Dモデリング、トレード監視ツールの制作記録。"
+      content="栗原宏雅の就活用ポートフォリオブログ。AIエンジニア、機械学習、データ分析、AI活用プロダクト開発に向けた制作物と研究ログ。"
     >
     <link rel="stylesheet" href="styles.css">
   </head>
@@ -27,27 +27,27 @@
       <section class="hero" aria-labelledby="hero-title">
         <img class="hero-media" src="assets/plamo-dashboard.png" alt="制作したプラモデル改善AIのダッシュボード画面">
         <div class="hero-copy">
-          <p class="eyebrow">就活ポートフォリオ / 制作ログ</p>
+          <p class="eyebrow">AIエンジニア志望 / 制作ポートフォリオ</p>
           <h1 id="hero-title">作った成果物を、<br>設計判断まで読める<br>ブログに。</h1>
           <p>
-            研究、AIツール、データ可視化、3D生成、運用スクリプトを「何を作ったか」だけでなく、
-            なぜその形にしたか、どう検証したかまで短く読めるように整理しました。
+            AIエンジニア、機械学習・データ分析、AI活用プロダクト開発に関わる職種を志望する大学院生のポートフォリオです。
+            研究、AIツール、可視化、3D生成、運用ツールを、なぜ作ったか、どう設計したか、どう検証したかまで整理しています。
           </p>
           <div class="hero-actions" aria-label="主要リンク">
             <a class="button primary" href="#articles">記事を読む</a>
-            <a class="button secondary" href="#contact">プロフィールを編集</a>
+            <a class="button secondary" href="#contact">プロフィールを見る</a>
           </div>
         </div>
       </section>
 
       <section class="summary-band" aria-label="ポートフォリオ概要">
         <div>
-          <strong>7</strong>
-          <span>掲載候補</span>
+          <strong>4</strong>
+          <span>主要成果物</span>
         </div>
         <div>
-          <strong>AI / Data</strong>
-          <span>主軸領域</span>
+          <strong>AI Engineer</strong>
+          <span>志望職種</span>
         </div>
         <div>
           <strong>検証重視</strong>
@@ -80,6 +80,11 @@
                 検索拡張生成の回答に対して、証拠の十分性を見て棄権できるルールを設計。
                 JaQuAD派生データ、統計分析、人手評価まで含めて、研究として提出可能な形に整えた。
               </p>
+              <ul class="fact-list">
+                <li>技術: Python、RAG、評価スクリプト、統計分析</li>
+                <li>担当: データ作成、実験設計、分析、論文草稿作成</li>
+                <li>期間: 2026年制作</li>
+              </ul>
               <a href="#post-rag">記事本文へ</a>
             </div>
           </article>
@@ -93,6 +98,11 @@
                 ユーザーの組み立てレビューと部品特徴を読み、破損・保持力・説明不足などを分類。
                 改善優先度と根拠をダッシュボードで見られるMVPを作った。
               </p>
+              <ul class="fact-list">
+                <li>技術: Python、Streamlit、pandas、Plotly、unittest</li>
+                <li>担当: 分析ロジック、UI、可視化、テスト、README整備</li>
+                <li>期間: 2026年制作</li>
+              </ul>
               <a href="#post-plamo">記事本文へ</a>
             </div>
           </article>
@@ -109,6 +119,11 @@
                 PC側の市場データ取得、スマホ側のHTTPダッシュボード、ペーパー売買ランナーを分離。
                 実注文は明示的に無効化し、検証と安全性を優先した。
               </p>
+              <ul class="fact-list">
+                <li>技術: Python、PowerShell、HTTP dashboard、Termux</li>
+                <li>担当: データ連携、監視画面、ペーパートレード、安全設定</li>
+                <li>位置づけ: データ監視・運用設計ツール</li>
+              </ul>
               <a href="#post-lmtrade">記事本文へ</a>
             </div>
           </article>
@@ -125,6 +140,11 @@
                 OBJモデル生成スクリプトと、検証用のランナー・完成体画像を作成。
                 AI分析ツールに渡せるサンプルデータとして使える形にした。
               </p>
+              <ul class="fact-list">
+                <li>技術: Python、Blender、OBJ、画像アセット生成</li>
+                <li>担当: モデル生成、検証用素材作成、AI入力データ整理</li>
+                <li>狙い: AI分析ツールの検証データ化</li>
+              </ul>
               <a href="#post-3d">記事本文へ</a>
             </div>
           </article>
@@ -139,6 +159,9 @@
             この研究では、RAGが「答えらしさ」だけで回答してしまう問題に対して、
             検索された証拠が質問の要求を満たしているかを確認し、不十分なら棄権する仕組みを実装した。
             外部APIに依存しない決定的な実験スクリプトを用意し、結果の再現性を優先している。
+          </p>
+          <p class="career-note">
+            AIエンジニアとして、モデルを使うだけでなく、失敗条件を定義し、評価可能な形に落とし込む力を示すための研究です。
           </p>
           <div class="detail-grid">
             <div>
@@ -163,6 +186,9 @@
             自由記述レビューを、設計改善に使える分類・スコア・改善案へ変換するプロトタイプ。
             Streamlitで入力、集計、グラフ、リスクマップ、Markdownレポートを一通り確認できるようにした。
           </p>
+          <p class="career-note">
+            AIを業務に組み込む場面を想定し、入力、分析、可視化、レポート出力までを小さく完結させたプロダクト型の成果物です。
+          </p>
           <div class="detail-grid">
             <div>
               <h3>工夫した点</h3>
@@ -186,6 +212,9 @@
             日本ETFのデイトレ監視を想定し、MarketSpeed II RSS、PCブリッジ、スマホ側ダッシュボード、
             ペーパー売買ランナーを組み合わせたローカル運用ツール。
           </p>
+          <p class="career-note">
+            投資判断そのものではなく、データ取得、監視、ログ、実行制御を分けて安全に運用する設計を学ぶためのツールです。
+          </p>
           <div class="detail-grid">
             <div>
               <h3>工夫した点</h3>
@@ -208,6 +237,9 @@
           <p>
             Blender向けのモデル生成スクリプトとOBJ出力を作り、模型AIの検証に使える画像アセットも整備。
             完成品だけでなく、ランナー状態や部品検査という工程に注目した。
+          </p>
+          <p class="career-note">
+            AIモデルや分析ツールに入れる前段のデータ作成・検証素材づくりまで扱えることを示す成果物です。
           </p>
           <div class="detail-grid">
             <div>
@@ -259,10 +291,11 @@
       <section class="contact-band" id="contact" aria-labelledby="contact-title">
         <div>
           <p class="eyebrow">Profile</p>
-          <h2 id="contact-title">プロフィール欄</h2>
+          <h2 id="contact-title">プロフィール</h2>
           <p>
             栗原宏雅 / 創価大学大学院。
-            AI・データ分析・ローカルツール開発を横断し、研究としての検証と実用ツールとしての使いやすさを両方意識して制作しています。
+            AIエンジニア、機械学習・データ分析、AI活用プロダクト開発に関わる職種を志望しています。
+            研究としての検証と、実用ツールとしての使いやすさを両方意識し、データ作成、実験、可視化、テスト、公開まで自分で進めています。
             GitHub: https://github.com/kur11208 / 連絡先: piromasa1234@gmail.com
           </p>
         </div>

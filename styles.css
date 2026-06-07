@@ -323,6 +323,21 @@ h1 {
   color: var(--muted);
 }
 
+.fact-list {
+  display: grid;
+  gap: 6px;
+  padding: 12px 0 0;
+  margin: 0 0 18px;
+  list-style: none;
+  color: #39424c;
+  font-size: 14px;
+}
+
+.fact-list li {
+  padding-left: 12px;
+  border-left: 3px solid var(--teal);
+}
+
 .post-content a {
   color: var(--teal);
   font-weight: 800;
@@ -343,6 +358,13 @@ h1 {
 .article-body article > p:not(.post-meta) {
   max-width: 880px;
   color: #303841;
+}
+
+.career-note {
+  padding: 14px 16px;
+  background: #eef5f3;
+  border-left: 4px solid var(--teal);
+  font-weight: 700;
 }
 
 .detail-grid {
