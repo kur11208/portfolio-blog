@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>成果物ブログ | Portfolio Lab Notes</title>
+    <meta
+      name="description"
+      content="就活用に制作物、研究、検証ログをまとめたポートフォリオブログ。AI、RAG、データ分析、3Dモデリング、トレード監視ツールの制作記録。"
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="トップへ">
+        <span class="brand-mark">PL</span>
+        <span>Portfolio Lab Notes</span>
+      </a>
+      <nav aria-label="主要ナビゲーション">
+        <a href="#articles">記事</a>
+        <a href="#timeline">制作ログ</a>
+        <a href="#contact">連絡先</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <img class="hero-media" src="assets/plamo-dashboard.png" alt="制作したプラモデル改善AIのダッシュボード画面">
+        <div class="hero-copy">
+          <p class="eyebrow">就活ポートフォリオ / 制作ログ</p>
+          <h1 id="hero-title">作った成果物を、<br>設計判断まで読める<br>ブログに。</h1>
+          <p>
+            研究、AIツール、データ可視化、3D生成、運用スクリプトを「何を作ったか」だけでなく、
+            なぜその形にしたか、どう検証したかまで短く読めるように整理しました。
+          </p>
+          <div class="hero-actions" aria-label="主要リンク">
+            <a class="button primary" href="#articles">記事を読む</a>
+            <a class="button secondary" href="#contact">プロフィールを編集</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="summary-band" aria-label="ポートフォリオ概要">
+        <div>
+          <strong>7</strong>
+          <span>掲載候補</span>
+        </div>
+        <div>
+          <strong>AI / Data</strong>
+          <span>主軸領域</span>
+        </div>
+        <div>
+          <strong>検証重視</strong>
+          <span>再現手順と評価を明記</span>
+        </div>
+      </section>
+
+      <section class="section" id="articles" aria-labelledby="articles-title">
+        <div class="section-heading">
+          <p class="eyebrow">Articles</p>
+          <h2 id="articles-title">成果物の記事</h2>
+          <p>面接で話しやすいように、課題、実装、検証、学びの順で読める構成にしています。</p>
+        </div>
+
+        <div class="filters" role="group" aria-label="記事フィルタ">
+          <button class="filter-button active" type="button" data-filter="all">すべて</button>
+          <button class="filter-button" type="button" data-filter="ai">AI</button>
+          <button class="filter-button" type="button" data-filter="research">研究</button>
+          <button class="filter-button" type="button" data-filter="tool">ツール</button>
+          <button class="filter-button" type="button" data-filter="modeling">3D</button>
+        </div>
+
+        <div class="article-grid">
+          <article class="post-card featured" data-category="ai research">
+            <img src="assets/rag-paper-page.png" alt="RAG研究論文PDFの1ページ目">
+            <div class="post-content">
+              <p class="post-meta">研究 / RAG / 評価設計</p>
+              <h3>根拠検証付きRAGで、日本語QAの幻覚を抑える</h3>
+              <p>
+                検索拡張生成の回答に対して、証拠の十分性を見て棄権できるルールを設計。
+                JaQuAD派生データ、統計分析、人手評価まで含めて、研究として提出可能な形に整えた。
+              </p>
+              <a href="#post-rag">記事本文へ</a>
+            </div>
+          </article>
+
+          <article class="post-card" data-category="ai tool">
+            <img src="assets/plamo-dashboard.png" alt="プラモデル設計改善AIのダッシュボード">
+            <div class="post-content">
+              <p class="post-meta">AIツール / Streamlit / 可視化</p>
+              <h3>Plamo Design Feedback AI</h3>
+              <p>
+                ユーザーの組み立てレビューと部品特徴を読み、破損・保持力・説明不足などを分類。
+                改善優先度と根拠をダッシュボードで見られるMVPを作った。
+              </p>
+              <a href="#post-plamo">記事本文へ</a>
+            </div>
+          </article>
+
+          <article class="post-card" data-category="tool">
+            <div class="visual-panel trading" aria-hidden="true">
+              <span>ETF</span>
+              <b>paper trading monitor</b>
+            </div>
+            <div class="post-content">
+              <p class="post-meta">運用ツール / Python / Termux</p>
+              <h3>LMTrade: ETF監視とペーパートレード</h3>
+              <p>
+                PC側の市場データ取得、スマホ側のHTTPダッシュボード、ペーパー売買ランナーを分離。
+                実注文は明示的に無効化し、検証と安全性を優先した。
+              </p>
+              <a href="#post-lmtrade">記事本文へ</a>
+            </div>
+          </article>
+
+          <article class="post-card" data-category="modeling">
+            <div class="split-image">
+              <img src="assets/runner-sample.png" alt="ランナー状態のサンプル画像">
+              <img src="assets/assembled-sample.png" alt="組み立て後状態のサンプル画像">
+            </div>
+            <div class="post-content">
+              <p class="post-meta">3D / 画像生成 / データ作成</p>
+              <h3>3Dモデル生成と模型検証用アセット</h3>
+              <p>
+                OBJモデル生成スクリプトと、検証用のランナー・完成体画像を作成。
+                AI分析ツールに渡せるサンプルデータとして使える形にした。
+              </p>
+              <a href="#post-3d">記事本文へ</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section article-body" aria-label="記事本文">
+        <article id="post-rag">
+          <p class="post-meta">Research Note 01</p>
+          <h2>根拠検証付きRAGで、日本語QAの幻覚を抑える</h2>
+          <p>
+            この研究では、RAGが「答えらしさ」だけで回答してしまう問題に対して、
+            検索された証拠が質問の要求を満たしているかを確認し、不十分なら棄権する仕組みを実装した。
+            外部APIに依存しない決定的な実験スクリプトを用意し、結果の再現性を優先している。
+          </p>
+          <div class="detail-grid">
+            <div>
+              <h3>工夫した点</h3>
+              <p>回答生成の前に、証拠十分性、要求属性、回答可能性を分けて扱い、誤答を無理に生成しない設計にした。</p>
+            </div>
+            <div>
+              <h3>検証</h3>
+              <p>500問規模のテンプレート拡張、JaQuAD派生データ、McNemar検定、ブートストラップ信頼区間、人手評価を整理した。</p>
+            </div>
+            <div>
+              <h3>話せる学び</h3>
+              <p>AIの性能改善では、モデル選択だけでなく、失敗時の振る舞いと評価設計が重要だと学んだ。</p>
+            </div>
+          </div>
+        </article>
+
+        <article id="post-plamo">
+          <p class="post-meta">Build Note 02</p>
+          <h2>Plamo Design Feedback AI</h2>
+          <p>
+            自由記述レビューを、設計改善に使える分類・スコア・改善案へ変換するプロトタイプ。
+            Streamlitで入力、集計、グラフ、リスクマップ、Markdownレポートを一通り確認できるようにした。
+          </p>
+          <div class="detail-grid">
+            <div>
+              <h3>工夫した点</h3>
+              <p>ルールベースで始め、あとからLLMや画像解析を差し替えやすいように、分析、採点、改善案生成を分離した。</p>
+            </div>
+            <div>
+              <h3>検証</h3>
+              <p>単体テスト、Streamlitの起動スモーク、README用画像生成をCIで確認できる構成にした。</p>
+            </div>
+            <div>
+              <h3>話せる学び</h3>
+              <p>AIを単体で見せるより、業務の判断材料に落とす画面設計が価値につながると分かった。</p>
+            </div>
+          </div>
+        </article>
+
+        <article id="post-lmtrade">
+          <p class="post-meta">Build Note 03</p>
+          <h2>LMTrade: ETF監視とペーパートレード</h2>
+          <p>
+            日本ETFのデイトレ監視を想定し、MarketSpeed II RSS、PCブリッジ、スマホ側ダッシュボード、
+            ペーパー売買ランナーを組み合わせたローカル運用ツール。
+          </p>
+          <div class="detail-grid">
+            <div>
+              <h3>工夫した点</h3>
+              <p>市場データ取得と売買判断を分け、実注文を設定で無効化。安全に検証できる構成にした。</p>
+            </div>
+            <div>
+              <h3>検証</h3>
+              <p>Pythonのコンパイルチェック、unittest、運用README、スマホ起動補助スクリプトを用意した。</p>
+            </div>
+            <div>
+              <h3>話せる学び</h3>
+              <p>金融系ツールは機能より先に、安全側に倒れる設計とログ・除外設定が重要だと学んだ。</p>
+            </div>
+          </div>
+        </article>
+
+        <article id="post-3d">
+          <p class="post-meta">Build Note 04</p>
+          <h2>3Dモデル生成と模型検証用アセット</h2>
+          <p>
+            Blender向けのモデル生成スクリプトとOBJ出力を作り、模型AIの検証に使える画像アセットも整備。
+            完成品だけでなく、ランナー状態や部品検査という工程に注目した。
+          </p>
+          <div class="detail-grid">
+            <div>
+              <h3>工夫した点</h3>
+              <p>見栄えだけでなく、分析対象として扱いやすい部品番号、ゲート位置、検査ポイントを意識した。</p>
+            </div>
+            <div>
+              <h3>検証</h3>
+              <p>OBJ出力と画像アセットを分け、AI分析ツール側で読み込める材料として整理した。</p>
+            </div>
+            <div>
+              <h3>話せる学び</h3>
+              <p>生成物は単体で終わらせず、別のツールの入力データにするとポートフォリオ全体のつながりが出る。</p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="section timeline" id="timeline" aria-labelledby="timeline-title">
+        <div class="section-heading">
+          <p class="eyebrow">Process</p>
+          <h2 id="timeline-title">制作ログの見せ方</h2>
+        </div>
+        <ol>
+          <li>
+            <span>01</span>
+            <div>
+              <h3>課題を短く書く</h3>
+              <p>誰のどんな困りごとに向けた成果物かを、最初の3行で伝える。</p>
+            </div>
+          </li>
+          <li>
+            <span>02</span>
+            <div>
+              <h3>設計判断を書く</h3>
+              <p>採用技術の羅列ではなく、なぜその分割や評価方法にしたかを書く。</p>
+            </div>
+          </li>
+          <li>
+            <span>03</span>
+            <div>
+              <h3>検証結果を置く</h3>
+              <p>テスト、実験、失敗例、未解決の課題を隠さず書くと、面接で深掘りされても説明しやすい。</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="contact-band" id="contact" aria-labelledby="contact-title">
+        <div>
+          <p class="eyebrow">Profile</p>
+          <h2 id="contact-title">プロフィール欄</h2>
+          <p>
+            栗原宏雅 / 創価大学大学院。
+            AI・データ分析・ローカルツール開発を横断し、研究としての検証と実用ツールとしての使いやすさを両方意識して制作しています。
+            GitHub: https://github.com/kur11208 / 連絡先: piromasa1234@gmail.com
+          </p>
+        </div>
+        <div class="contact-actions">
+          <a class="button primary" href="mailto:piromasa1234@gmail.com">メールする</a>
+          <a class="button light" href="https://github.com/kur11208" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Portfolio Lab Notes / Built for job hunting.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
