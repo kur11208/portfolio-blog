@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>3Dモデル生成と検証アセット | Portfolio Lab Notes</title>
+    <meta name="description" content="AI分析ツールの検証に使う3Dモデルと画像アセットの制作ログ。">
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../index.html#top"><span class="brand-mark">PL</span><span>Portfolio Lab Notes</span></a>
+      <nav><a href="../index.html#articles">一覧</a><a href="../index.html#contact">連絡先</a></nav>
+    </header>
+    <main class="article-page">
+      <p class="eyebrow">Data Article</p>
+      <h1>3Dモデル生成と<br>模型検証用アセット</h1>
+      <div class="split-image article-split">
+        <img src="../assets/runner-sample.png" alt="ランナー状態のサンプル画像">
+        <img src="../assets/assembled-sample.png" alt="組み立て後状態のサンプル画像">
+      </div>
+      <section>
+        <h2>作った理由</h2>
+        <p>
+          AIツールを作るとき、モデルや画面だけでなく、入力データをどう用意するかも重要です。
+          Plamo Design Feedback AIの検証では、完成品だけでなく、ランナー状態や部品検査のような工程データが必要でした。
+          そこで、3Dモデル生成と検証用画像アセットを別成果物として整理しました。
+        </p>
+      </section>
+      <section>
+        <h2>設計判断</h2>
+        <p>
+          見た目の良い画像だけではなく、分析対象として扱いやすい部品番号、ゲート位置、検査ポイントを意識しました。
+          OBJ出力と画像素材を分けることで、3D表示、画像分析、ダッシュボード表示のどれにも使いやすくしています。
+        </p>
+      </section>
+      <section>
+        <h2>検証</h2>
+        <p>
+          Blender向けの生成スクリプト、OBJ出力、サンプル画像を用意し、AI分析ツール側で読み込める素材として整理しました。
+          成果物同士をつなげることで、「データ作成から分析、可視化まで一貫して考える」姿勢を示せます。
+        </p>
+      </section>
+      <section>
+        <h2>ブログ・コンテンツ領域への応用</h2>
+        <p>
+          記事制作でも、本文だけでなく画像、図表、スクリーンショット、検証データを整える工程があります。
+          この成果物は、AIに渡す素材や記事に載せる説明用アセットを、目的に合わせて作る力のサンプルです。
+        </p>
+      </section>
+      <a class="button secondary" href="../index.html#articles">一覧へ戻る</a>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LMTrade | Portfolio Lab Notes</title>
+    <meta name="description" content="ETF市場データ監視とペーパートレード運用ツールの制作ログ。">
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../index.html#top"><span class="brand-mark">PL</span><span>Portfolio Lab Notes</span></a>
+      <nav><a href="../index.html#articles">一覧</a><a href="https://github.com/kur11208/lmtrade">GitHub</a></nav>
+    </header>
+    <main class="article-page">
+      <p class="eyebrow">Operations Article</p>
+      <h1>LMTrade:<br>ETF監視とペーパートレード</h1>
+      <div class="visual-panel trading article-visual" aria-hidden="true"><span>ETF</span><b>data monitoring workflow</b></div>
+      <section>
+        <h2>作った理由</h2>
+        <p>
+          この成果物は投資判断を自動化するためではなく、市場データの取得、監視、ログ、実行制御を分けて扱う運用設計の練習として作りました。
+          AIやデータ系のシステムでも、モデル以外の監視、入力管理、安全設定が品質に直結します。
+        </p>
+      </section>
+      <section>
+        <h2>設計判断</h2>
+        <p>
+          PC側でMarketSpeed II RSSからデータを読み、スマホ側でHTTPダッシュボードとペーパー売買ランナーを動かす構成にしました。
+          実注文は設定で無効化し、外部連携と判断ロジックを分離しています。
+          秘密情報、ログ、SQLite、取引履歴を公開対象から除外する方針もREADMEに明記しました。
+        </p>
+      </section>
+      <section>
+        <h2>検証</h2>
+        <p>
+          Pythonのコンパイルチェック、unittest、運用README、スマホ起動補助スクリプトを用意しました。
+          機能追加よりも、危険な操作をしないこと、再起動後に状態を追えること、公開時に不要なファイルが混ざらないことを優先しました。
+        </p>
+      </section>
+      <section>
+        <h2>ブログ企業向けに見せたい点</h2>
+        <p>
+          直接のブログ機能ではありませんが、データパイプライン、監視画面、運用安全性の考え方は、
+          記事配信、アクセス解析、バッチ処理、CMS周辺ツールにも応用できます。
+          コンテンツを継続運用するシステムでは、作って終わりではなく、止まった時に気づける設計が重要だと考えています。
+        </p>
+      </section>
+      <a class="button primary" href="https://github.com/kur11208/lmtrade" target="_blank" rel="noreferrer">GitHubを見る</a>
+      <a class="button secondary" href="../index.html#articles">一覧へ戻る</a>
+    </main>
+  </body>
+</html>

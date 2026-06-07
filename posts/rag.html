@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>根拠検証付きRAG | Portfolio Lab Notes</title>
+    <meta name="description" content="根拠検証付きRAGで日本語QAの幻覚を抑える研究の設計、実装、評価ログ。">
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../index.html#top"><span class="brand-mark">PL</span><span>Portfolio Lab Notes</span></a>
+      <nav><a href="../index.html#articles">一覧</a><a href="../index.html#contact">連絡先</a></nav>
+    </header>
+    <main class="article-page">
+      <p class="eyebrow">Research Article</p>
+      <h1>根拠検証付きRAGで、<br>日本語QAの幻覚を抑える</h1>
+      <img src="../assets/rag-paper-page.png" alt="RAG研究論文PDFのプレビュー">
+      <section>
+        <h2>作った理由</h2>
+        <p>
+          RAGは検索結果を使って回答する仕組みですが、検索された文書が質問の要求を満たしていない場合でも、
+          もっともらしい回答を生成してしまうことがあります。AIエンジニアとしては、回答精度を上げるだけでなく、
+          答えるべきでない場面を定義し、誤答を抑える設計が重要だと考えました。
+        </p>
+      </section>
+      <section>
+        <h2>設計判断</h2>
+        <p>
+          まず外部LLM APIに依存しない決定的な実験系を作り、証拠十分性、要求属性、回答可能性を分けて扱いました。
+          この分割により、モデルを大きくする前に、失敗条件と評価軸を明確にできます。
+          将来LLMを差し替える場合でも、評価スクリプトやデータセットを再利用しやすい構成にしました。
+        </p>
+      </section>
+      <section>
+        <h2>検証</h2>
+        <p>
+          500問規模のテンプレート拡張、JaQuAD派生データ、人手評価を用意し、McNemar検定とブートストラップ信頼区間で差を確認しました。
+          研究として見せるため、実験手順、データの制約、未解決の課題も残しています。
+          成功例だけではなく、評価データの作り方そのものを説明できるようにした点がこの成果物の中心です。
+        </p>
+      </section>
+      <section>
+        <h2>ブログ・コンテンツ領域への応用</h2>
+        <p>
+          この仕組みは、記事制作におけるファクトチェックや根拠確認にも応用できます。
+          たとえば、記事の主張に対して参照資料が十分か、引用元と本文の関係がずれていないか、
+          公開前レビューで機械的に確認する編集支援ツールへ発展させられます。
+        </p>
+      </section>
+      <a class="button secondary" href="../index.html#articles">一覧へ戻る</a>
+    </main>
+  </body>
+</html>
