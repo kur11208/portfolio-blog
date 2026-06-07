@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TFT Advisor MVP | Portfolio Lab Notes</title>
+    <meta name="description" content="Teamfight Tacticsの盤面情報から次の行動を提案するWebアプリの制作ログ。">
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../index.html#top"><span class="brand-mark">PL</span><span>Portfolio Lab Notes</span></a>
+      <nav><a href="../index.html#articles">一覧</a><a href="https://github.com/kur11208/TFT">GitHub</a></nav>
+    </header>
+    <main class="article-page">
+      <p class="eyebrow">AI Tool Article</p>
+      <h1>TFT Advisor MVP</h1>
+      <div class="visual-panel tft article-visual" aria-hidden="true">
+        <img src="../assets/tft-icon.png" alt="">
+        <span>TFT</span>
+        <b>real-time decision support</b>
+      </div>
+      <section>
+        <h2>作った理由</h2>
+        <p>
+          Teamfight Tacticsでは、盤面、ベンチ、ショップ、アイテム、オーグメント、所持ゴールド、レベルを同時に見て次の行動を決めます。
+          初心者や復帰プレイヤーにとって判断材料が多く、どの構成に寄せるか、買うべきユニットは何か、今は貯金かロールかを迷いやすい。
+          そこで、入力された状態から次の行動を即時提案するMVPを作りました。
+        </p>
+      </section>
+      <section>
+        <h2>設計判断</h2>
+        <p>
+          バックエンドはFastAPIでAPIを切り、フロントエンドはReactとTypeScriptで構築しました。
+          `boardStrength`、推奨構成、経済行動、ショップ購入優先順位、切る候補、アイテム方針を分けて返すことで、
+          UI側が結果を見やすく表示できます。セット更新に備えて、チャンピオン、特性、アイテム、オーグメント、構成定義はJSONで差し替えられる形にしました。
+        </p>
+      </section>
+      <section>
+        <h2>検証と拡張</h2>
+        <p>
+          手入力の分析だけでなく、OpenCV、Tesseract OCR、スクリーンショット取得、スロット分類のテストも用意しています。
+          Overwolf/Electron系のオーバーレイ実装も含め、将来的にはゲーム画面上に判断材料を重ねる構成を想定しています。
+          まず手入力APIを安定させ、次に画面認識を同じ入力形式へ変換する設計にしたため、段階的に精度を上げられます。
+        </p>
+      </section>
+      <section>
+        <h2>AIエンジニアとして見せたい点</h2>
+        <p>
+          この成果物は、大規模モデルだけに頼るAIではなく、状態表現、ルール、スコアリング、画像認識、UIを組み合わせた意思決定支援ツールです。
+          入力を構造化し、判断根拠を分けて返し、ユーザーが次に取る行動へ落とす流れは、業務支援AIや編集支援AIにも応用できます。
+        </p>
+      </section>
+      <section>
+        <h2>ブログ・コンテンツ領域への応用</h2>
+        <p>
+          ゲーム中の状態を読み取り、次の行動候補を提示する構造は、記事制作の編集支援にも近いです。
+          たとえば、記事の状態、読者ニーズ、SEOキーワード、過去の反応を入力し、次に直すべき見出しや追記すべき情報を提案するツールへ展開できます。
+        </p>
+      </section>
+      <a class="button primary" href="https://github.com/kur11208/TFT" target="_blank" rel="noreferrer">GitHubを見る</a>
+      <a class="button secondary" href="../index.html#articles">一覧へ戻る</a>
+    </main>
+  </body>
+</html>

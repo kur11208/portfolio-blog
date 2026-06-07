@@ -307,6 +307,31 @@ h1 {
   line-height: 1.02;
 }
 
+.visual-panel.tft {
+  grid-template-columns: 72px 1fr;
+  align-content: end;
+  align-items: end;
+  background:
+    linear-gradient(135deg, rgba(40, 75, 99, 0.18), rgba(183, 121, 31, 0.16)),
+    repeating-linear-gradient(135deg, #f9faf6, #f9faf6 16px, #e6ece5 17px);
+}
+
+.visual-panel.tft img {
+  width: 72px;
+  height: 72px;
+  border-radius: 8px;
+  box-shadow: 0 8px 22px rgba(23, 27, 31, 0.18);
+}
+
+.visual-panel.tft span {
+  grid-column: 1 / -1;
+  background: var(--blue);
+}
+
+.visual-panel.tft b {
+  grid-column: 1 / -1;
+}
+
 .post-content {
   padding: 26px;
 }

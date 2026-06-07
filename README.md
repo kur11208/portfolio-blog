@@ -6,6 +6,7 @@
 
 - 根拠検証付きRAGによる日本語QAの幻覚抑制
 - Plamo Design Feedback AI
+- TFT Advisor MVP
 - LMTrade ETF監視・ペーパートレード
 - 3Dモデル生成と模型検証用アセット
 
