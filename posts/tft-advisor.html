@@ -45,6 +45,26 @@
         </p>
       </section>
       <section>
+        <h2>ローカル起動手順</h2>
+        <p>
+          現時点では公開デモではなく、GitHubからローカルで起動して確認する構成です。
+          バックエンドはFastAPI、フロントエンドはReact/Viteで分けて起動します。
+        </p>
+        <pre><code># 1つ目のターミナル
+git clone https://github.com/kur11208/TFT.git
+cd TFT\backend
+.\run.bat
+
+# 2つ目のターミナル
+cd TFT\frontend
+npm install
+npm run dev</code></pre>
+        <p>
+          バックエンドは <code>http://127.0.0.1:8010/docs</code>、フロントエンドは <code>http://localhost:5173</code> で確認できます。
+          画面では「サンプルを読み込む」から入力例を入れ、Analyzeで提案結果を表示します。
+        </p>
+      </section>
+      <section>
         <h2>AIエンジニアとして見せたい点</h2>
         <p>
           この成果物は、大規模モデルだけに頼るAIではなく、状態表現、ルール、スコアリング、画像認識、UIを組み合わせた意思決定支援ツールです。
@@ -52,6 +72,7 @@
         </p>
       </section>
       <a class="button primary" href="https://github.com/kur11208/TFT" target="_blank" rel="noreferrer">GitHubを見る</a>
+      <a class="button secondary" href="https://github.com/kur11208/TFT#セットアップ" target="_blank" rel="noreferrer">起動手順を見る</a>
       <a class="button secondary" href="../index.html#articles">一覧へ戻る</a>
     </main>
   </body>
