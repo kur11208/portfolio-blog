@@ -28,10 +28,10 @@
         <img class="hero-media" src="assets/plamo-dashboard.png" alt="制作したプラモデル改善AIのダッシュボード画面">
         <div class="hero-copy">
           <p class="eyebrow">AIエンジニア志望 / 制作ポートフォリオ</p>
-          <h1 id="hero-title">作った成果物を、<br>設計判断まで読める<br>ブログに。</h1>
+          <h1 id="hero-title">成果を数字で語れる<br>AIポートフォリオ。</h1>
           <p>
             AIエンジニア、機械学習・データ分析、AI活用プロダクト開発に関わる職種を志望する大学院生のポートフォリオです。
-            研究、AIツール、可視化、3D生成、運用ツールを、なぜ作ったか、どう設計したか、どう検証したかまで整理しています。
+            RAG研究、AIツール、可視化、運用設計、検証用データ作成を、なぜ作ったか、どう設計したか、どの数値で検証したかまで整理しています。
           </p>
           <div class="hero-actions" aria-label="主要リンク">
             <a class="button primary" href="#articles">記事を読む</a>
@@ -42,8 +42,8 @@
 
       <section class="summary-band" aria-label="ポートフォリオ概要">
         <div>
-          <strong>5</strong>
-          <span>主要成果物</span>
+          <strong>4 + 1</strong>
+          <span>主要成果物 + 検証アセット</span>
         </div>
         <div>
           <strong>AI Engineer</strong>
@@ -80,6 +80,10 @@
                 検索拡張生成の回答に対して、証拠の十分性を見て棄権できるルールを設計。
                 JaQuAD派生データ、統計分析、人手評価まで含めて、研究として提出可能な形に整えた。
               </p>
+              <p class="result-highlight">
+                全体正答率 66.7% → 100.0%、未支持主張率 33.3% → 0.0%
+                <span>36問の合成制御コーパスで、標準BM25-RAGと提案手法を比較。</span>
+              </p>
               <ul class="fact-list">
                 <li>技術: Python、RAG、評価スクリプト、統計分析</li>
                 <li>担当: データ作成、実験設計、分析、論文草稿作成</li>
@@ -87,7 +91,8 @@
               </ul>
               <div class="project-links">
                 <a href="posts/rag.html">詳細記事</a>
-                <a href="https://github.com/kur11208" target="_blank" rel="noreferrer">GitHub</a>
+                <a href="https://github.com/kur11208/gakuzyutu" target="_blank" rel="noreferrer">GitHub</a>
+                <a href="https://github.com/kur11208/gakuzyutu/blob/main/packages/jxiv_upload/jxiv_noapi_lm_preprint.pdf" target="_blank" rel="noreferrer">PDF</a>
               </div>
             </div>
           </article>
@@ -108,7 +113,8 @@
               </ul>
               <div class="project-links">
                 <a href="posts/plamo.html">詳細記事</a>
-                <a href="https://github.com/kur11208" target="_blank" rel="noreferrer">GitHub</a>
+                <a href="https://github.com/kur11208/plamo-design-feedback-ai" target="_blank" rel="noreferrer">GitHub</a>
+                <a href="https://github.com/kur11208/plamo-design-feedback-ai#readme" target="_blank" rel="noreferrer">実行手順</a>
               </div>
             </div>
           </article>
@@ -168,20 +174,20 @@
               <img src="assets/assembled-sample.png" alt="組み立て後状態のサンプル画像">
             </div>
             <div class="post-content">
-              <p class="post-meta">3D / 画像生成 / データ作成</p>
+              <p class="post-meta">Plamo連携 / 3D / 検証データ</p>
               <h3>3Dモデル生成と模型検証用アセット</h3>
               <p>
                 OBJモデル生成スクリプトと、検証用のランナー・完成体画像を作成。
-                AI分析ツールに渡せるサンプルデータとして使える形にした。
+                単独成果物ではなく、Plamo Design Feedback AIの入力データ準備・検証素材として位置づけた。
               </p>
               <ul class="fact-list">
                 <li>技術: Python、Blender、OBJ、画像アセット生成</li>
                 <li>担当: モデル生成、検証用素材作成、AI入力データ整理</li>
-                <li>狙い: AI分析ツールの検証データ化</li>
+                <li>位置づけ: Plamoのデータ準備・検証アセット</li>
               </ul>
               <div class="project-links">
                 <a href="posts/3d-assets.html">詳細記事</a>
-                <a href="https://github.com/kur11208" target="_blank" rel="noreferrer">GitHub</a>
+                <a href="https://github.com/kur11208/3Dmodel" target="_blank" rel="noreferrer">GitHub</a>
               </div>
             </div>
           </article>
@@ -189,19 +195,6 @@
       </section>
 
       <section class="section article-body" aria-label="記事本文">
-        <article id="content-ai">
-          <p class="post-meta">Content Engineering</p>
-          <h2>AIを使って、書く・届ける・改善する工程も支援したい</h2>
-          <p>
-            ブログやメディア企業では、記事を公開するだけでなく、企画、下書き、レビュー、SEO、更新、効果測定までの流れが重要だと考えています。
-            このポートフォリオでは、RAGの根拠検証、レビュー文の分類、Markdownレポート生成、可視化ダッシュボードを扱っており、
-            将来的には編集支援、ファクトチェック、記事改善提案、CMS連携のようなコンテンツ制作フローにも応用したいです。
-          </p>
-          <p class="career-note">
-            AIエンジニアとして、モデルの実装だけでなく、読者に届くコンテンツを安全に作り、継続的に改善する仕組みに関わりたいです。
-          </p>
-        </article>
-
         <article id="post-rag">
           <p class="post-meta">Research Note 01</p>
           <h2>根拠検証付きRAGで、日本語QAの幻覚を抑える</h2>
@@ -209,6 +202,11 @@
             この研究では、RAGが「答えらしさ」だけで回答してしまう問題に対して、
             検索された証拠が質問の要求を満たしているかを確認し、不十分なら棄権する仕組みを実装した。
             外部APIに依存しない決定的な実験スクリプトを用意し、結果の再現性を優先している。
+            36問の合成制御コーパスはBM25-RAGの失敗パターンを確認するための小規模評価であり、実データへの汎用性検証は今後の課題です。
+          </p>
+          <p class="result-highlight">
+            全体正答率 66.7% → 100.0%、回答不能質問の保留率 0.0% → 100.0%、未支持主張率 33.3% → 0.0%
+            <span>標準BM25-RAGとEvidence-Verified RAGを36問の制御データで比較。</span>
           </p>
           <p class="career-note">
             AIエンジニアとして、モデルを使うだけでなく、失敗条件を定義し、評価可能な形に落とし込む力を示すための研究です。
@@ -263,7 +261,7 @@
             ペーパー売買ランナーを組み合わせたローカル運用ツール。
           </p>
           <p class="career-note">
-            投資判断そのものではなく、データ取得、監視、ログ、実行制御を分けて安全に運用する設計を学ぶためのツールです。
+            AI要素を前面に出す成果物ではなく、AIプロダクトにも必要なデータ取得、監視、ログ、実行制御を分けて安全に運用する設計力を示すサンプルです。
           </p>
           <div class="detail-grid">
             <div>
@@ -289,7 +287,7 @@
             完成品だけでなく、ランナー状態や部品検査という工程に注目した。
           </p>
           <p class="career-note">
-            AIモデルや分析ツールに入れる前段のデータ作成・検証素材づくりまで扱えることを示す成果物です。
+            Plamo Design Feedback AIの付属データ準備として、AIモデルや分析ツールに入れる前段のデータ作成・検証素材づくりまで扱えることを示す成果物です。
           </p>
           <div class="detail-grid">
             <div>
@@ -343,7 +341,7 @@
           <p class="eyebrow">Profile</p>
           <h2 id="contact-title">プロフィール</h2>
           <p>
-            栗原宏雅 / 創価大学大学院。
+            栗原宏雅 / 創価大学大学院 修士課程、2027年3月修了予定。AIセキュリティ、信頼性評価、RAGの根拠検証を中心に研究しています。
             AIエンジニア、機械学習・データ分析、AI活用プロダクト開発に関わる職種を志望しています。
             研究としての検証と、実用ツールとしての使いやすさを両方意識し、データ作成、実験、可視化、テスト、公開まで自分で進めています。
             GitHub: https://github.com/kur11208 / 連絡先: piromasa1234@gmail.com

@@ -16,12 +16,17 @@
       <p class="eyebrow">Research Article</p>
       <h1>根拠検証付きRAGで、<br>日本語QAの幻覚を抑える</h1>
       <img src="../assets/rag-paper-page.png" alt="RAG研究論文PDFのプレビュー">
+      <p class="result-highlight">
+        全体正答率 66.7% → 100.0%、回答不能質問の保留率 0.0% → 100.0%、未支持主張率 33.3% → 0.0%
+        <span>36問の合成制御コーパスで、標準BM25-RAGとEvidence-Verified RAGを比較。</span>
+      </p>
       <section>
         <h2>作った理由</h2>
         <p>
           RAGは検索結果を使って回答する仕組みですが、検索された文書が質問の要求を満たしていない場合でも、
           もっともらしい回答を生成してしまうことがあります。AIエンジニアとしては、回答精度を上げるだけでなく、
           答えるべきでない場面を定義し、誤答を抑える設計が重要だと考えました。
+          なお、36問の合成制御コーパスはBM25-RAGの失敗パターンを確認するための小規模評価であり、実データへの汎用性検証は今後の課題です。
         </p>
       </section>
       <section>
@@ -40,14 +45,8 @@
           成功例だけではなく、評価データの作り方そのものを説明できるようにした点がこの成果物の中心です。
         </p>
       </section>
-      <section>
-        <h2>ブログ・コンテンツ領域への応用</h2>
-        <p>
-          この仕組みは、記事制作におけるファクトチェックや根拠確認にも応用できます。
-          たとえば、記事の主張に対して参照資料が十分か、引用元と本文の関係がずれていないか、
-          公開前レビューで機械的に確認する編集支援ツールへ発展させられます。
-        </p>
-      </section>
+      <a class="button primary" href="https://github.com/kur11208/gakuzyutu" target="_blank" rel="noreferrer">GitHubを見る</a>
+      <a class="button secondary" href="https://github.com/kur11208/gakuzyutu/blob/main/packages/jxiv_upload/jxiv_noapi_lm_preprint.pdf" target="_blank" rel="noreferrer">PDFを見る</a>
       <a class="button secondary" href="../index.html#articles">一覧へ戻る</a>
     </main>
   </body>
