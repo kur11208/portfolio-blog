@@ -41,18 +41,9 @@
       </section>
 
       <section class="summary-band" aria-label="ポートフォリオ概要">
-        <div>
-          <strong>4 + 1</strong>
-          <span>主要成果物 + 検証アセット</span>
-        </div>
-        <div>
-          <strong>AI Engineer</strong>
-          <span>志望職種</span>
-        </div>
-        <div>
-          <strong>検証重視</strong>
-          <span>再現手順と評価を明記</span>
-        </div>
+        <div><strong>4 + 1</strong><span>主要成果物 + 検証アセット</span></div>
+        <div><strong>AI Engineer</strong><span>志望職種</span></div>
+        <div><strong>検証重視</strong><span>再現手順と評価を明記</span></div>
       </section>
 
       <section class="section" id="articles" aria-labelledby="articles-title">
@@ -127,15 +118,15 @@
               <b>real-time advisor</b>
             </div>
             <div class="post-content">
-              <p class="post-meta">AI活用ツール / FastAPI / React / 画像認識</p>
+              <p class="post-meta">AI活用ツール / FastAPI / React / 拡張設計</p>
               <h3>TFT Advisor MVP</h3>
               <p>
                 Teamfight Tacticsの盤面、ショップ、アイテム、オーグメント情報を入力し、次の行動を提案するWebアプリ。
-                FastAPIとReactを分け、将来的なOCR・スクリーンショット認識・オーバーレイ表示まで拡張できる構成にした。
+                FastAPIとReactを分け、将来的なOCR・スクリーンショット認識・オーバーレイ表示にも拡張しやすい構成にした。
               </p>
               <ul class="fact-list">
-                <li>技術: FastAPI、React、TypeScript、OpenCV、OCR、Overwolf/Electron</li>
-                <li>担当: API設計、評価ロジック、UI、画像認識拡張、テスト</li>
+                <li>技術: FastAPI、React、TypeScript、JSONデータ設計</li>
+                <li>担当: API設計、評価ロジック、UI、拡張しやすい構成設計、テスト</li>
                 <li>GitHub: kur11208/TFT</li>
               </ul>
               <div class="project-links">
@@ -147,10 +138,7 @@
           </article>
 
           <article class="post-card" data-category="tool">
-            <div class="visual-panel trading" aria-hidden="true">
-              <span>ETF</span>
-              <b>paper trading monitor</b>
-            </div>
+            <div class="visual-panel trading" aria-hidden="true"><span>ETF</span><b>paper trading monitor</b></div>
             <div class="post-content">
               <p class="post-meta">運用ツール / Python / Termux</p>
               <h3>LMTrade: ETF監視とペーパートレード</h3>
@@ -210,22 +198,11 @@
             全体正答率 66.7% → 100.0%、回答不能質問の保留率 0.0% → 100.0%、未支持主張率 33.3% → 0.0%
             <span>標準BM25-RAGとEvidence-Verified RAGを36問の制御データで比較。</span>
           </p>
-          <p class="career-note">
-            AIエンジニアとして、モデルを使うだけでなく、失敗条件を定義し、評価可能な形に落とし込む力を示すための研究です。
-          </p>
+          <p class="career-note">AIエンジニアとして、モデルを使うだけでなく、失敗条件を定義し、評価可能な形に落とし込む力を示すための研究です。</p>
           <div class="detail-grid">
-            <div>
-              <h3>工夫した点</h3>
-              <p>回答生成の前に、証拠十分性、要求属性、回答可能性を分けて扱い、誤答を無理に生成しない設計にした。</p>
-            </div>
-            <div>
-              <h3>検証</h3>
-              <p>500問規模のテンプレート拡張、JaQuAD派生データ、McNemar検定、ブートストラップ信頼区間、人手評価を整理した。</p>
-            </div>
-            <div>
-              <h3>話せる学び</h3>
-              <p>AIの性能改善では、モデル選択だけでなく、失敗時の振る舞いと評価設計が重要だと学んだ。</p>
-            </div>
+            <div><h3>工夫した点</h3><p>回答生成の前に、証拠十分性、要求属性、回答可能性を分けて扱い、誤答を無理に生成しない設計にした。</p></div>
+            <div><h3>検証</h3><p>500問規模のテンプレート拡張、JaQuAD派生データ、McNemar検定、ブートストラップ信頼区間、人手評価を整理した。</p></div>
+            <div><h3>話せる学び</h3><p>AIの性能改善では、モデル選択だけでなく、失敗時の振る舞いと評価設計が重要だと学んだ。</p></div>
           </div>
         </article>
 
@@ -240,22 +217,11 @@
             Streamlit Community Cloudで公開済み
             <span><a href="https://plamo-design-feedback-ai.streamlit.app/" target="_blank" rel="noreferrer">https://plamo-design-feedback-ai.streamlit.app/</a></span>
           </p>
-          <p class="career-note">
-            AIを業務に組み込む場面を想定し、入力、分析、可視化、レポート出力までを小さく完結させたプロダクト型の成果物です。
-          </p>
+          <p class="career-note">AIを業務に組み込む場面を想定し、入力、分析、可視化、レポート出力までを小さく完結させたプロダクト型の成果物です。</p>
           <div class="detail-grid">
-            <div>
-              <h3>工夫した点</h3>
-              <p>ルールベースで始め、あとからLLMや画像解析を差し替えやすいように、分析、採点、改善案生成を分離した。</p>
-            </div>
-            <div>
-              <h3>検証</h3>
-              <p>単体テスト、Streamlitの起動スモーク、README用画像生成をCIで確認できる構成にした。</p>
-            </div>
-            <div>
-              <h3>話せる学び</h3>
-              <p>AIを単体で見せるより、業務の判断材料に落とす画面設計が価値につながると分かった。</p>
-            </div>
+            <div><h3>工夫した点</h3><p>ルールベースで始め、あとからLLMや画像解析を差し替えやすいように、分析、採点、改善案生成を分離した。</p></div>
+            <div><h3>検証</h3><p>単体テスト、Streamlitの起動スモーク、README用画像生成をCIで確認できる構成にした。</p></div>
+            <div><h3>話せる学び</h3><p>AIを単体で見せるより、業務の判断材料に落とす画面設計が価値につながると分かった。</p></div>
           </div>
         </article>
 
@@ -266,22 +232,11 @@
             日本ETFのデイトレ監視を想定し、MarketSpeed II RSS、PCブリッジ、スマホ側ダッシュボード、
             ペーパー売買ランナーを組み合わせたローカル運用ツール。
           </p>
-          <p class="career-note">
-            AI要素を前面に出す成果物ではなく、AIプロダクトにも必要なデータ取得、監視、ログ、実行制御を分けて安全に運用する設計力を示すサンプルです。
-          </p>
+          <p class="career-note">AI要素を前面に出す成果物ではなく、AIプロダクトにも必要なデータ取得、監視、ログ、実行制御を分けて安全に運用する設計力を示すサンプルです。</p>
           <div class="detail-grid">
-            <div>
-              <h3>工夫した点</h3>
-              <p>市場データ取得と売買判断を分け、実注文を設定で無効化。安全に検証できる構成にした。</p>
-            </div>
-            <div>
-              <h3>検証</h3>
-              <p>Pythonのコンパイルチェック、unittest、運用README、スマホ起動補助スクリプトを用意した。</p>
-            </div>
-            <div>
-              <h3>話せる学び</h3>
-              <p>金融系ツールは機能より先に、安全側に倒れる設計とログ・除外設定が重要だと学んだ。</p>
-            </div>
+            <div><h3>工夫した点</h3><p>市場データ取得と売買判断を分け、実注文を設定で無効化。安全に検証できる構成にした。</p></div>
+            <div><h3>検証</h3><p>Pythonのコンパイルチェック、unittest、運用README、スマホ起動補助スクリプトを用意した。</p></div>
+            <div><h3>話せる学び</h3><p>金融系ツールは機能より先に、安全側に倒れる設計とログ・除外設定が重要だと学んだ。</p></div>
           </div>
         </article>
 
@@ -292,22 +247,11 @@
             Blender向けのモデル生成スクリプトとOBJ出力を作り、模型AIの検証に使える画像アセットも整備。
             完成品だけでなく、ランナー状態や部品検査という工程に注目した。
           </p>
-          <p class="career-note">
-            Plamo Design Feedback AIの付属データ準備として、AIモデルや分析ツールに入れる前段のデータ作成・検証素材づくりまで扱えることを示す成果物です。
-          </p>
+          <p class="career-note">Plamo Design Feedback AIの付属データ準備として、AIモデルや分析ツールに入れる前段のデータ作成・検証素材づくりまで扱えることを示す成果物です。</p>
           <div class="detail-grid">
-            <div>
-              <h3>工夫した点</h3>
-              <p>見栄えだけでなく、分析対象として扱いやすい部品番号、ゲート位置、検査ポイントを意識した。</p>
-            </div>
-            <div>
-              <h3>検証</h3>
-              <p>OBJ出力と画像アセットを分け、AI分析ツール側で読み込める材料として整理した。</p>
-            </div>
-            <div>
-              <h3>話せる学び</h3>
-              <p>生成物は単体で終わらせず、別のツールの入力データにするとポートフォリオ全体のつながりが出る。</p>
-            </div>
+            <div><h3>工夫した点</h3><p>見栄えだけでなく、分析対象として扱いやすい部品番号、ゲート位置、検査ポイントを意識した。</p></div>
+            <div><h3>検証</h3><p>OBJ出力と画像アセットを分け、AI分析ツール側で読み込める材料として整理した。</p></div>
+            <div><h3>話せる学び</h3><p>生成物は単体で終わらせず、別のツールの入力データにするとポートフォリオ全体のつながりが出る。</p></div>
           </div>
         </article>
       </section>
@@ -318,27 +262,9 @@
           <h2 id="timeline-title">制作ログの見せ方</h2>
         </div>
         <ol>
-          <li>
-            <span>01</span>
-            <div>
-              <h3>課題を短く書く</h3>
-              <p>誰のどんな困りごとに向けた成果物かを、最初の3行で伝える。</p>
-            </div>
-          </li>
-          <li>
-            <span>02</span>
-            <div>
-              <h3>設計判断を書く</h3>
-              <p>採用技術の羅列ではなく、なぜその分割や評価方法にしたかを書く。</p>
-            </div>
-          </li>
-          <li>
-            <span>03</span>
-            <div>
-              <h3>検証結果を置く</h3>
-              <p>テスト、実験、失敗例、未解決の課題を隠さず書くと、面接で深掘りされても説明しやすい。</p>
-            </div>
-          </li>
+          <li><span>01</span><div><h3>課題を短く書く</h3><p>誰のどんな困りごとに向けた成果物かを、最初の3行で伝える。</p></div></li>
+          <li><span>02</span><div><h3>設計判断を書く</h3><p>採用技術の羅列ではなく、なぜその分割や評価方法にしたかを書く。</p></div></li>
+          <li><span>03</span><div><h3>検証結果を置く</h3><p>テスト、実験、失敗例、未解決の課題を隠さず書くと、面接で深掘りされても説明しやすい。</p></div></li>
         </ol>
       </section>
 
@@ -347,7 +273,7 @@
           <p class="eyebrow">Profile</p>
           <h2 id="contact-title">プロフィール</h2>
           <p>
-            栗原宏雅 / 創価大学大学院 修士課程、2027年3月修了予定。AIセキュリティ、信頼性評価、RAGの根拠検証を中心に研究しています。
+            栗原宏雅 / 創価大学大学院 理工学研究科 情報システム工学専攻 修士課程、2028年3月修了予定。AIの信頼性評価、メタ認知、不確実性下での保留判断、RAGの根拠検証を中心に研究しています。
             AIエンジニア、機械学習・データ分析、AI活用プロダクト開発に関わる職種を志望しています。
             研究としての検証と、実用ツールとしての使いやすさを両方意識し、データ作成、実験、可視化、テスト、公開まで自分で進めています。
             GitHub: https://github.com/kur11208 / 連絡先: piromasa1234@gmail.com
@@ -361,7 +287,7 @@
     </main>
 
     <footer>
-      <p>Portfolio Lab Notes / Hirokuni Kurihara</p>
+      <p>Portfolio Lab Notes / Hiromasa Kurihara</p>
     </footer>
 
     <script src="script.js"></script>
