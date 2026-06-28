@@ -41,7 +41,7 @@
       </section>
 
       <section class="summary-band" aria-label="ポートフォリオ概要">
-        <div><strong>4 + 1</strong><span>主要成果物 + 検証アセット</span></div>
+        <div><strong>7</strong><span>主な成果物・研究ログ・学習ログ</span></div>
         <div><strong>AI Engineer</strong><span>志望職種</span></div>
         <div><strong>検証重視</strong><span>再現手順と評価を明記</span></div>
       </section>
@@ -182,6 +182,47 @@
               </div>
             </div>
           </article>
+
+          <article class="post-card" data-category="ai research">
+            <div class="visual-panel" aria-hidden="true"><span>Agent</span><b>metacognitive safety control</b></div>
+            <div class="post-content">
+              <p class="post-meta">修士研究 / PC Agent / 安全制御</p>
+              <h3>Research PC Agent</h3>
+              <p>
+                PC操作エージェントの操作案に対して、risk・uncertainty・confidenceを使った安全制御をかける研究用MVP。
+                疑似ファイルシステム、比較条件、評価ログ、図表、発表資料までまとめた。
+              </p>
+              <ul class="fact-list">
+                <li>技術: Python、pytest、YAML設定、Mermaid図、実験ログ</li>
+                <li>担当: 研究設計、MVP実装、評価指標、発表資料整理</li>
+                <li>位置づけ: 修士研究テーマの実験基盤</li>
+              </ul>
+              <div class="project-links">
+                <a href="posts/research-pc-agent.html">詳細記事</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="post-card" data-category="tool">
+            <div class="visual-panel trading" aria-hidden="true"><span>Learn</span><b>Python to FastAPI</b></div>
+            <div class="post-content">
+              <p class="post-meta">学習ログ / Python / FastAPI</p>
+              <h3>tech-basic</h3>
+              <p>
+                Python基礎からCSV、JSON、pandas、SQLite、FastAPI、pytest、GitHubまでをDay単位で学習。
+                最終的にETF価格・売買シグナル・損益を表示する小さなWeb画面へまとめた。
+              </p>
+              <ul class="fact-list">
+                <li>技術: Python、SQLite、FastAPI、pytest、Git/GitHub</li>
+                <li>担当: 自主学習、実装、テスト、学習記録</li>
+                <li>位置づけ: 基礎力と継続学習のログ</li>
+              </ul>
+              <div class="project-links">
+                <a href="posts/tech-basic.html">詳細記事</a>
+                <a href="https://github.com/kur11208/tech-basic" target="_blank" rel="noreferrer">GitHub</a>
+              </div>
+            </div>
+          </article>
         </div>
       </section>
 
@@ -253,6 +294,36 @@
             <div><h3>工夫した点</h3><p>見栄えだけでなく、分析対象として扱いやすい部品番号、ゲート位置、検査ポイントを意識した。</p></div>
             <div><h3>検証</h3><p>OBJ出力と画像アセットを分け、AI分析ツール側で読み込める材料として整理した。</p></div>
             <div><h3>話せる学び</h3><p>生成物は単体で終わらせず、別のツールの入力データにするとポートフォリオ全体のつながりが出る。</p></div>
+          </div>
+        </article>
+
+        <article id="post-research-pc-agent">
+          <p class="post-meta">Research Note 05</p>
+          <h2>Research PC Agent</h2>
+          <p>
+            PC操作エージェントが生成した操作案に対して、メタ認知的な安全制御をかける修士研究用の実験基盤。
+            実PCを直接動かさず、疑似ファイルシステムとMockAgentを使って、安全性・過剰停止・タスク完了率のバランスを評価できる形にした。
+          </p>
+          <p class="career-note">研究テーマをコード、評価ログ、図表、発表資料まで落とし込み、検証可能な形へ進めていることを示す成果物です。</p>
+          <div class="detail-grid">
+            <div><h3>工夫した点</h3><p>危険操作を単純に止めるだけでなく、risk、uncertainty、confidenceを分けて判断する構成にした。</p></div>
+            <div><h3>検証</h3><p>no_control、rule_based、metacognition、multi_riskの比較条件を用意し、pytestとCSVログで結果を確認できるようにした。</p></div>
+            <div><h3>話せる学び</h3><p>AIエージェントは能力だけでなく、実行してよいかを評価する制御層が重要だと説明できる。</p></div>
+          </div>
+        </article>
+
+        <article id="post-tech-basic">
+          <p class="post-meta">Learning Note 06</p>
+          <h2>tech-basic</h2>
+          <p>
+            PythonとWebアプリ開発の基礎をDay単位で積み上げた学習ログ。
+            変数、条件分岐、ファイル操作、CSV、JSON、pandas、SQLite、FastAPI、pytest、Git/GitHubを順番に扱い、最後にETF管理画面として説明できる形に整理した。
+          </p>
+          <p class="career-note">完成品だけでなく、基礎をどう学び、どう記録し、どう成果物へまとめたかを示すログです。</p>
+          <div class="detail-grid">
+            <div><h3>工夫した点</h3><p>一気に大きなアプリを作らず、Dayごとの小さい実装とノートで理解を残した。</p></div>
+            <div><h3>検証</h3><p>pytestやFastAPI TestClientを使い、学習コードでも動作確認を残す流れにした。</p></div>
+            <div><h3>話せる学び</h3><p>Codexを丸投げではなく、学習コーチ、レビュー担当、進捗管理の補助として使う方針を整理した。</p></div>
           </div>
         </article>
       </section>

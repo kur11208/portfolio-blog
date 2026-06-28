@@ -9,6 +9,8 @@
 - TFT Advisor MVP
 - LMTrade ETF監視・ペーパートレード
 - 3Dモデル生成と模型検証用アセット
+- Research PC Agent
+- tech-basic
 
 ## 編集する場所
 
